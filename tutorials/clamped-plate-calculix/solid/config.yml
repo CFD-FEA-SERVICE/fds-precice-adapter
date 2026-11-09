@@ -1,0 +1,10 @@
+participants:
+  Solid:
+    interfaces:
+      - faces-mesh: Solid-Faces
+        patch: interface
+        read-data: [Heat-Flux]
+      - nodes-mesh: Solid-Nodes
+        patch: interface
+        write-data: [Temperature]
+precice-config-file: ../precice-config.xml

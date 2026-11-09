@@ -1,0 +1,740 @@
+---[precice] [0m This is preCICE version 3.3.1
+---[precice] [0m Revision info: no-info [git failed to run]
+---[precice] [0m Build type: Release (without debug log)
+---[precice] [0m Working directory "/root/fds-precice/tutorials/ceiling-plate/solid"
+---[precice] [0m Configuring preCICE with configuration "../precice-config.xml"
+---[precice] [0m I am participant "Solid"
+---[precice] [0m Setting up primary communication to coupling partner/s
+---[precice] [0m Primary ranks are connected
+---[precice] [0m Setting up preliminary secondary communication to coupling partner/s
+---[precice] [0m Receive global mesh Fluid-Mesh
+---[precice] [0m Prepare partition for mesh Solid-Mesh
+---[precice] [0m Gather mesh Solid-Mesh
+---[precice] [0m Send global mesh Solid-Mesh
+---[precice] [0m Setting up secondary communication to coupling partner/s
+---[precice] [0m Secondary ranks are connected
+---[precice] [0m Computing "nearest-neighbor" mapping from mesh "Fluid-Mesh" to mesh "Solid-Mesh" in "read" direction.
+---[precice] [0m Mapping distance min:0.0353553 max:0.0353553 avg: 0.0353553 var: 1.30104e-18 cnt: 400
+---[precice] [0m Mapping "Heat-Flux" for t=0 from "Fluid-Mesh" to "Solid-Mesh" (skipped zero sample)
+---[precice] [0m Mapping "Heat-Flux" for t=0.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 1, t 0 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=1 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 2, t 0.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=1.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 3, t 1 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=2 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 4, t 1.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=2.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 5, t 2 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=3 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 6, t 2.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=3.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 7, t 3 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=4 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 8, t 3.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=4.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 9, t 4 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 10, t 4.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=5.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 11, t 5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=6 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 12, t 5.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=6.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 13, t 6 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=7 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 14, t 6.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=7.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 15, t 7 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=8 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 16, t 7.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=8.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 17, t 8 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=9 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 18, t 8.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=9.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 19, t 9 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=10 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 20, t 9.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=10.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 21, t 10 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=11 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 22, t 10.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=11.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 23, t 11 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=12 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 24, t 11.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=12.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 25, t 12 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=13 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 26, t 12.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=13.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 27, t 13 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=14 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 28, t 13.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=14.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 29, t 14 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=15 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 30, t 14.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=15.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 31, t 15 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=16 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 32, t 15.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=16.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 33, t 16 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=17 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 34, t 16.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=17.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 35, t 17 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=18 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 36, t 17.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=18.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 37, t 18 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=19 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 38, t 18.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=19.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 39, t 19 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=20 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 40, t 19.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=20.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 41, t 20 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=21 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 42, t 20.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=21.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 43, t 21 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=22 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 44, t 21.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=22.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 45, t 22 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=23 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 46, t 22.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=23.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 47, t 23 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=24 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 48, t 23.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=24.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 49, t 24 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=25 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 50, t 24.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=25.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 51, t 25 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=26 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 52, t 25.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=26.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 53, t 26 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=27 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 54, t 26.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=27.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 55, t 27 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=28 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 56, t 27.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=28.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 57, t 28 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=29 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 58, t 28.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=29.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 59, t 29 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=30 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 60, t 29.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=30.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 61, t 30 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=31 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 62, t 30.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=31.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 63, t 31 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=32 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 64, t 31.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=32.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 65, t 32 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=33 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 66, t 32.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=33.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 67, t 33 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=34 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 68, t 33.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=34.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 69, t 34 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=35 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 70, t 34.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=35.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 71, t 35 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=36 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 72, t 35.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=36.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 73, t 36 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=37 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 74, t 36.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=37.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 75, t 37 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=38 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 76, t 37.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=38.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 77, t 38 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=39 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 78, t 38.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=39.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 79, t 39 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=40 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 80, t 39.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=40.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 81, t 40 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=41 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 82, t 40.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=41.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 83, t 41 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=42 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 84, t 41.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=42.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 85, t 42 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=43 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 86, t 42.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=43.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 87, t 43 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=44 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 88, t 43.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=44.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 89, t 44 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=45 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 90, t 44.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=45.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 91, t 45 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=46 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 92, t 45.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=46.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 93, t 46 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=47 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 94, t 46.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=47.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 95, t 47 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=48 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 96, t 47.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=48.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 97, t 48 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=49 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 98, t 48.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=49.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 99, t 49 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=50 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 100, t 49.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=50.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 101, t 50 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=51 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 102, t 50.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=51.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 103, t 51 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=52 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 104, t 51.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=52.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 105, t 52 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=53 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 106, t 52.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=53.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 107, t 53 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=54 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 108, t 53.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=54.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 109, t 54 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=55 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 110, t 54.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=55.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 111, t 55 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=56 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 112, t 55.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=56.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 113, t 56 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=57 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 114, t 56.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=57.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 115, t 57 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=58 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 116, t 57.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=58.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 117, t 58 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=59 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 118, t 58.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=59.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 119, t 59 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=60 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 120, t 59.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=60.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 121, t 60 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=61 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 122, t 60.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=61.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 123, t 61 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=62 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 124, t 61.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=62.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 125, t 62 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=63 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 126, t 62.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=63.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 127, t 63 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=64 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 128, t 63.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=64.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 129, t 64 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=65 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 130, t 64.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=65.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 131, t 65 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=66 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 132, t 65.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=66.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 133, t 66 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=67 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 134, t 66.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=67.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 135, t 67 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=68 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 136, t 67.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=68.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 137, t 68 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=69 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 138, t 68.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=69.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 139, t 69 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=70 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 140, t 69.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=70.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 141, t 70 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=71 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 142, t 70.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=71.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 143, t 71 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=72 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 144, t 71.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=72.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 145, t 72 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=73 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 146, t 72.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=73.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 147, t 73 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=74 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 148, t 73.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=74.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 149, t 74 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=75 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 150, t 74.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=75.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 151, t 75 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=76 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 152, t 75.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=76.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 153, t 76 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=77 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 154, t 76.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=77.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 155, t 77 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=78 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 156, t 77.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=78.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 157, t 78 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=79 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 158, t 78.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=79.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 159, t 79 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=80 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 160, t 79.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=80.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 161, t 80 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=81 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 162, t 80.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=81.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 163, t 81 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=82 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 164, t 81.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=82.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 165, t 82 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=83 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 166, t 82.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=83.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 167, t 83 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=84 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 168, t 83.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=84.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 169, t 84 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=85 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 170, t 84.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=85.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 171, t 85 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=86 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 172, t 85.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=86.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 173, t 86 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=87 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 174, t 86.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=87.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 175, t 87 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=88 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 176, t 87.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=88.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 177, t 88 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=89 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 178, t 88.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=89.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 179, t 89 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=90 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 180, t 89.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=90.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 181, t 90 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=91 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 182, t 90.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=91.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 183, t 91 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=92 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 184, t 91.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=92.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 185, t 92 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=93 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 186, t 92.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=93.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 187, t 93 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=94 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 188, t 93.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=94.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 189, t 94 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=95 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 190, t 94.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=95.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 191, t 95 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=96 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 192, t 95.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=96.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 193, t 96 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=97 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 194, t 96.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=97.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 195, t 97 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=98 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 196, t 97.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=98.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 197, t 98 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=99 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 198, t 98.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=99.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 199, t 99 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=100 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 200, t 99.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=100.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 201, t 100 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=101 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 202, t 100.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=101.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 203, t 101 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=102 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 204, t 101.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=102.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 205, t 102 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=103 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 206, t 102.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=103.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 207, t 103 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=104 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 208, t 103.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=104.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 209, t 104 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=105 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 210, t 104.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=105.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 211, t 105 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=106 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 212, t 105.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=106.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 213, t 106 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=107 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 214, t 106.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=107.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 215, t 107 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=108 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 216, t 107.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=108.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 217, t 108 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=109 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 218, t 108.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=109.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 219, t 109 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=110 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 220, t 109.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=110.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 221, t 110 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=111 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 222, t 110.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=111.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 223, t 111 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=112 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 224, t 111.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=112.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 225, t 112 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=113 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 226, t 112.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=113.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 227, t 113 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=114 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 228, t 113.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=114.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 229, t 114 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=115 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 230, t 114.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=115.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 231, t 115 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=116 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 232, t 115.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=116.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 233, t 116 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=117 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 234, t 116.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=117.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 235, t 117 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=118 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 236, t 117.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=118.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 237, t 118 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=119 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 238, t 118.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=119.5 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 239, t 119 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Mapping "Heat-Flux" for t=120 from "Fluid-Mesh" to "Solid-Mesh"
+---[precice] [0m time-window 240, t 119.5 (max: 120), Dt 0.5, max-dt 0.5
+---[precice] [0m Time window completed
+---[precice] [0m Reached end at: final time-window: 240, final time: 120
+---[precice] [0m Close communication channels

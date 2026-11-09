@@ -1,0 +1,145 @@
+diff --git a/Build/makefile b/Build/makefile
+index 45200ca..4bdd219 100644
+--- a/Build/makefile
++++ b/Build/makefile
+@@ -123,7 +123,7 @@ ifdef HYPRE_HOME # This assumes the HYPRE library is available.
+    LFLAGS_HYPRE_WIN = ${HYPRE_HOME}\lib\HYPRE.lib
+ endif
+ 
+-obj_mpi = prec.o cons.o chem.o prop.o devc.o type.o data.o mesh.o func.o gsmv.o smvv.o rcal.o turb.o soot.o \
++obj_mpi = prec.o cons.o chem.o prop.o devc.o type.o data.o mesh.o func.o prci.o gsmv.o smvv.o rcal.o turb.o soot.o \
+           pois.o geom.o ccib.o radi.o part.o vege.o ctrl.o hvac.o mass.o imkl.o \
+           wall.o fire.o velo.o pres.o init.o dump.o read.o divg.o main.o
+ 
+@@ -412,6 +412,7 @@ data.o : prec.o func.o cons.o prop.o
+ rcal.o : func.o prec.o cons.o
+ mesh.o : prec.o type.o
+ func.o : prec.o prop.o cons.o type.o mesh.o devc.o
++prci.o : func.o prec.o cons.o type.o mesh.o
+ gsmv.o : prec.o func.o cons.o mesh.o
+ smvv.o : geom.o prec.o func.o cons.o data.o
+ turb.o : prec.o func.o cons.o mesh.o
+@@ -431,9 +432,9 @@ velo.o : func.o prec.o cons.o type.o mesh.o turb.o geom.o ccib.o
+ pres.o : func.o prec.o cons.o type.o mesh.o pois.o velo.o geom.o ccib.o imkl.o
+ init.o : func.o prec.o cons.o type.o mesh.o devc.o radi.o pois.o data.o pres.o geom.o
+ dump.o : func.o prec.o cons.o type.o mesh.o devc.o smvv.o turb.o data.o radi.o soot.o geom.o ccib.o fire.o
+-read.o : func.o prec.o cons.o type.o mesh.o devc.o ctrl.o radi.o hvac.o data.o geom.o mass.o soot.o prop.o
++read.o : func.o prci.o prec.o cons.o type.o mesh.o devc.o ctrl.o radi.o hvac.o data.o geom.o mass.o soot.o prop.o
+ divg.o : func.o prec.o cons.o type.o mesh.o mass.o ccib.o
+-main.o : func.o prec.o cons.o type.o mesh.o devc.o smvv.o mass.o divg.o velo.o wall.o fire.o radi.o part.o vege.o dump.o read.o init.o pres.o pois.o ctrl.o turb.o hvac.o data.o geom.o ccib.o soot.o prop.o chem.o
++main.o : func.o prci.o prec.o cons.o type.o mesh.o devc.o smvv.o mass.o divg.o velo.o wall.o fire.o radi.o part.o vege.o dump.o read.o init.o pres.o pois.o ctrl.o turb.o hvac.o data.o geom.o ccib.o soot.o prop.o chem.o
+ 
+ prec.obj :
+ imkl.obj :
+@@ -478,3 +479,13 @@ clean:
+ .PHONY : winclean
+ winclean:
+ 	-erase *.mod *.obj
++
++# preCICE-coupled build (FDS-preCICE adapter, CFD FEA SERVICE)
++PRECICE_LIBS = $(shell pkg-config --libs libprecice 2>/dev/null || echo -lprecice)
++ompi_gnu_linux_precice : FFLAGS = -O3 -std=f2018 -frecursive -ffpe-summary=none -fall-intrinsics $(GITINFOGNU) $(FFLAGSMKL) $(GFORTRAN_OPTIONS) $(FFLAGS_HYPRE) $(FFLAGS_SUNDIALS)
++ompi_gnu_linux_precice : LFLAGSMKL = $(LFLAGSMKL_GNU_OPENMP) $(LFLAGS_HYPRE) $(LFLAGS_SUNDIALS) $(PRECICE_LIBS)
++ompi_gnu_linux_precice : FCOMPL = $(COMP_FC)
++ompi_gnu_linux_precice : FOPENMPFLAGS = -fopenmp
++ompi_gnu_linux_precice : obj = fds_ompi_gnu_linux_precice
++ompi_gnu_linux_precice : setup $(obj_mpi)
++	$(FCOMPL) $(FFLAGS) $(FOPENMPFLAGS) -o $(obj) $(obj_mpi) $(LFLAGSMKL)
+diff --git a/Source/main.f90 b/Source/main.f90
+index fdca179..dfc78ce 100644
+--- a/Source/main.f90
++++ b/Source/main.f90
+@@ -32,6 +32,7 @@ USE WALL_ROUTINES
+ USE FIRE
+ USE CHEMCONS, ONLY: WRITE_CVODE_SUBSTEPS
+ USE CONTROL_FUNCTIONS
++USE PRECICE_ADAPTER
+ USE TURBULENCE, ONLY: NS_ANALYTICAL_SOLUTION,INIT_TURB_ARRAYS,COMPRESSION_WAVE,&
+                       TWOD_VORTEX_CERFACS,TWOD_VORTEX_UMD,TWOD_SOBOROT_UMD, &
+                       SYNTHETIC_TURBULENCE,SYNTHETIC_EDDY_SETUP,SANDIA_DAT
+@@ -591,6 +592,8 @@ ENDIF
+ !                                                   MAIN TIMESTEPPING LOOP
+ !***********************************************************************************************************************************
+ 
++IF (PRECICE_COUPLING) CALL PRECICE_INITIALIZE(T)
++
+ IF (MY_RANK==0 .AND. VERBOSE) CALL VERBOSE_PRINTOUT('Starting the time-stepping')
+ 
+ MAIN_LOOP: DO
+@@ -619,6 +622,10 @@ MAIN_LOOP: DO
+ 
+    IF ((T+DT+DT_END_FILL)>T_END) DT = MAX(T_END-T+TWENTY_EPSILON_EB,DT_END_MINIMUM)
+ 
++   ! Do not step over the end of a preCICE coupling time window
++
++   IF (PRECICE_COUPLING) CALL PRECICE_LIMIT_TIME_STEP(DT)
++
+    ! Determine if diagnostics should be dumped to the .out file at the end of this time step
+ 
+    LO10 = INT(LOG10(REAL(MAX(1,ABS(ICYC)),EB)))
+@@ -1035,6 +1042,10 @@ MAIN_LOOP: DO
+ 
+    ! Check for dumping end of timestep outputs
+ 
++   ! Exchange data with the other preCICE participant(s)
++
++   IF (PRECICE_COUPLING) CALL PRECICE_ADVANCE(T,DT,T_END)
++
+    CALL UPDATE_CONTROLS(T,DT,CTRL_STOP_STATUS,.FALSE.)
+    IF (CTRL_STOP_STATUS) STOP_STATUS = CTRL_STOP
+ 
+@@ -1110,6 +1121,7 @@ IF (CC_IBM) CALL FINISH_CC
+ 
+ ! Stop the calculation
+ 
++CALL PRECICE_FINALIZE
+ CALL END_FDS
+ 
+ ! This is the end of program. Supporting routines are listed below.
+diff --git a/Source/read.f90 b/Source/read.f90
+index 4c8ae6e..73d025d 100644
+--- a/Source/read.f90
++++ b/Source/read.f90
+@@ -17,6 +17,7 @@ USE COMP_FUNCTIONS, ONLY: GET_INPUT_FILE
+ USE MISC_FUNCTIONS, ONLY: SEARCH_CONTROLLER,WRITE_SUMMARY_INFO,GET_RAMP_INDEX,GET_SPEC_OR_SMIX_INDEX,DEFINE_PRES_METHOD
+ USE HVAC_ROUTINES, ONLY: READ_HVAC,LEAKAGE_HVAC
+ USE COMPLEX_GEOMETRY, ONLY: READ_GEOM
++USE PRECICE_ADAPTER, ONLY: READ_PRCI
+ USE MPI_F08
+ USE THERMO_PROPS
+ USE CHEMCONS, ONLY: DO_CHEM_LOAD_BALANCE, WRITE_CVODE_SUBSTEPS
+@@ -161,6 +162,7 @@ CALL READ_ISOF    ; CALL CHECK_STOP_STATUS ; IF (STOP_STATUS/=NO_STOP) RETURN
+ CALL READ_BNDF    ; CALL CHECK_STOP_STATUS ; IF (STOP_STATUS/=NO_STOP) RETURN
+ CALL READ_SM3D    ; CALL CHECK_STOP_STATUS ; IF (STOP_STATUS/=NO_STOP) RETURN
+ CALL READ_RADF    ; CALL CHECK_STOP_STATUS ; IF (STOP_STATUS/=NO_STOP) RETURN
++CALL READ_PRCI    ; CALL CHECK_STOP_STATUS ; IF (STOP_STATUS/=NO_STOP) RETURN
+ 
+ ! Deallocate arrays if allocated
+ IF (ALLOCATED(DUPLICATE_FUEL)) DEALLOCATE (DUPLICATE_FUEL)
+diff --git a/Source/type.f90 b/Source/type.f90
+index 5c9d156..3fdcd6a 100644
+--- a/Source/type.f90
++++ b/Source/type.f90
+@@ -987,6 +987,7 @@ TYPE SURFACE_TYPE
+    INTEGER :: HT_DIM=1                               !< Heat Transfer Dimension
+    LOGICAL :: VARIABLE_THICKNESS=.FALSE.             !< Allow the surface to have varying thickness
+    LOGICAL :: LINING=.FALSE.                         !< Indicator that the properties refer to a wall lining, not entire wall
++   LOGICAL :: PRECICE_COUPLED=.FALSE.                !< Surface temperature is imposed by the preCICE adapter (prci.f90)
+    LOGICAL :: INCLUDE_BOUNDARY_COORD_TYPE=.TRUE.     !< This surface requires basic coordinate information
+    LOGICAL :: INCLUDE_BOUNDARY_PROP1_TYPE=.TRUE.     !< This surface requires surface variables for heat and mass transfer
+    LOGICAL :: INCLUDE_BOUNDARY_PROP2_TYPE=.TRUE.     !< This surface requires surface variables for heat and mass transfer
+diff --git a/Source/wall.f90 b/Source/wall.f90
+index 25162ba..d37aa1f 100644
+--- a/Source/wall.f90
++++ b/Source/wall.f90
+@@ -722,7 +722,9 @@ METHOD_OF_HEAT_TRANSFER: SELECT CASE(SF%THERMAL_BC_INDEX)
+ 
+    CASE (SPECIFIED_TEMPERATURE) METHOD_OF_HEAT_TRANSFER
+ 
+-      IF (B1%U_NORMAL>TWENTY_EPSILON_EB .AND. .NOT.ANY(SF%LEAK_PATH>0)) THEN
++      IF (SF%PRECICE_COUPLED) THEN
++         ! B1%TMP_F is imposed by the preCICE adapter (prci.f90)
++      ELSEIF (B1%U_NORMAL>TWENTY_EPSILON_EB .AND. .NOT.ANY(SF%LEAK_PATH>0)) THEN
+          B1%TMP_F = B1%TMP_G
+       ELSEIF (SF%TMP_FRONT>0._EB) THEN
+          IF (ABS(B1%T_IGN-T_BEGIN) <= SPACING(B1%T_IGN) .AND. SF%RAMP(TIME_TEMP)%INDEX>=1) THEN

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<precice-configuration>
+  <log>
+    <sink filter="%Severity% > debug" format="---[precice] %ColorizedSeverity% %Message%" enabled="true" />
+  </log>
+
+  <data:scalar name="Heat-Flux" />
+  <data:scalar name="Temperature" />
+
+  <!-- FDS: WALL cell centres of the coupled SURF -->
+  <mesh name="Fluid-Mesh" dimensions="3">
+    <use-data name="Heat-Flux" />
+    <use-data name="Temperature" />
+  </mesh>
+  <!-- CalculiX: face centres of the exposed surface (reads heat flux) -->
+  <mesh name="Solid-Faces" dimensions="3">
+    <use-data name="Heat-Flux" />
+  </mesh>
+  <!-- CalculiX: nodes of the exposed surface (writes temperature) -->
+  <mesh name="Solid-Nodes" dimensions="3">
+    <use-data name="Temperature" />
+  </mesh>
+
+  <participant name="Fluid">
+    <provide-mesh name="Fluid-Mesh" />
+    <receive-mesh name="Solid-Nodes" from="Solid" />
+    <write-data name="Heat-Flux" mesh="Fluid-Mesh" />
+    <read-data name="Temperature" mesh="Fluid-Mesh" />
+    <mapping:nearest-neighbor direction="read" from="Solid-Nodes" to="Fluid-Mesh" constraint="consistent" />
+  </participant>
+
+  <participant name="Solid">
+    <provide-mesh name="Solid-Faces" />
+    <provide-mesh name="Solid-Nodes" />
+    <receive-mesh name="Fluid-Mesh" from="Fluid" />
+    <read-data name="Heat-Flux" mesh="Solid-Faces" />
+    <write-data name="Temperature" mesh="Solid-Nodes" />
+    <mapping:nearest-neighbor direction="read" from="Fluid-Mesh" to="Solid-Faces" constraint="consistent" />
+  </participant>
+
+  <m2n:sockets acceptor="Fluid" connector="Solid" exchange-directory=".." />
+
+  <coupling-scheme:serial-explicit>
+    <participants first="Fluid" second="Solid" />
+    <max-time value="180.0" />
+    <time-window-size value="0.5" />
+    <exchange data="Heat-Flux" mesh="Fluid-Mesh" from="Fluid" to="Solid" />
+    <exchange data="Temperature" mesh="Solid-Nodes" from="Solid" to="Fluid" />
+  </coupling-scheme:serial-explicit>
+</precice-configuration>
